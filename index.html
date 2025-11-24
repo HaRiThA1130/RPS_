@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rock • Paper • Scissors — Extraordinary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="confetti-canvas-wrap"><canvas id="confetti"></canvas></div>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">⚡</div>
+        <div class="title">Rock • Paper • Scissors</div>
+      </div>
+      <div class="right-controls">
+        <div class="score-pill">🏆 <span id="trophy">0</span></div>
+        <label class="switch">
+          <input id="themeToggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <button id="soundToggle" class="icon-btn" title="Toggle sound">🔈</button>
+      </div>
+    </header>
+
+    <section class="stage card">
+      <h1 class="game-title">Choose Your Weapon</h1>
+      <p class="lead">Quick rounds • Responsive • Delightful UX</p>
+
+      <div class="arena">
+        <div class="panel user-panel">
+          <div class="who">You</div>
+          <div id="userChoice" class="big-choice">—</div>
+          <div class="score">Score <span id="userScore">0</span></div>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="panel comp-panel">
+          <div class="who">Computer</div>
+          <div id="computerChoice" class="big-choice">—</div>
+          <div class="score">Score <span id="computerScore">0</span></div>
+        </div>
+      </div>
+
+      <div class="choices" role="group" aria-label="game choices">
+        <button class="choice" data-move="rock"><span class="emoji">🪨</span><span>Rock</span></button>
+        <button class="choice" data-move="paper"><span class="emoji">📄</span><span>Paper</span></button>
+        <button class="choice" data-move="scissors"><span class="emoji">✂️</span><span>Scissors</span></button>
+      </div>
+
+      <div id="banner" class="banner">Make a move — or press R / P / S</div>
+
+      <div class="controls-row">
+        <button id="resetBtn" class="btn ghost">Reset Scores</button>
+        <button id="demoBtn" class="btn">Auto Play 5</button>
+      </div>
+
+    </section>
+
+    <footer class="credits">Crafted with care • Extraordinary UI • Ready to deploy</footer>
+  </main>
+
+  <audio id="soundClick" src="sounds/click.wav" preload="auto"></audio>
+  <audio id="soundWin" src="sounds/win.wav" preload="auto"></audio>
+  <audio id="soundLose" src="sounds/lose.wav" preload="auto"></audio>
+  <audio id="soundDraw" src="sounds/draw.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
